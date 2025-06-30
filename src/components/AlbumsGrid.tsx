@@ -19,7 +19,7 @@ interface AlbumsGridProps {
 export const AlbumsGrid: React.FC<AlbumsGridProps> = ({ albums, isLoading }) => {
   if (isLoading) {
     return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {Array.from({ length: 20 }, (_, i) => (
           <div key={i} className="animate-pulse">
             <div className="bg-gray-200 aspect-square rounded-lg mb-3"></div>
@@ -41,7 +41,7 @@ export const AlbumsGrid: React.FC<AlbumsGridProps> = ({ albums, isLoading }) => 
   }
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
       {albums.map((album) => (
         <AlbumCard key={album.id} album={album} />
       ))}
